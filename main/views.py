@@ -7,7 +7,7 @@ from django.shortcuts import (
     render,
     get_object_or_404, redirect,
 )
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.utils import timezone
 from extensions.utils import change_month
 from account.models import User
@@ -38,15 +38,15 @@ from manager.models import (
 
 def index(request):
     if request.user.is_anonymous:
-        return redirect(reverse_lazy("account:login"))
-    if request.user.is_superuser or request.user.is_manager:
-        return redirect(reverse_lazy('manager:manager_panel'))
+        return redirect(reverse("account:login"))
+    elif request.user.is_superuser or request.user.is_manager:
+        return redirect(reverse('manager:manager_panel'))
     elif request.user.is_teacher:
-        return redirect(reverse_lazy('teacher:teacher_panel'))
+        return redirect(reverse('teacher:teacher_panel'))
     elif request.user.is_parent:
-        return redirect(reverse_lazy('parent:parent_panel'))
+        return redirect(revers('parent:parent_panel'))
     elif request.user.is_student:
-        return redirect(reverse_lazy('student:student_panel'))
+        return redirect(reverse('student:student_panel'))
 
 
 @login_required()
