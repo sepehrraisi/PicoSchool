@@ -1,12 +1,10 @@
-<div dir="rtl">
-
-  <p align="center">
+<p align="center">
   
   <img src="https://drive.google.com/uc?id=1Lp6hXe_C-_f0uCYBmsPQ2T1y4BY0n32L&export=download" alt="PicoSchool" width="40%">
   
   <p align="center">
     <i>
-    سیستم پیشرفته مدیریت نوشته شده با جنگو
+    Advanced school management system written in Django :)
     </i>
   </p>
   
@@ -14,172 +12,136 @@
 </p>
 
 <h3>
-⚙️ پیکربندی پروژه
+⚙️ Config the project
 </h3>
 
 <p>
-اول از همه نیاز هست که شما یک venv برای پروژه درست کنید. <br>
-پس در روت (root) اصلی پروژه باید این دستور را در ترمینال یا کنسول خود تایپ کنید: 
+First you should make venv for this project.
+So in the main root of project you should type this command in your Terminal or Console: 
 </p>
-
-<div dir="ltr">
 <pre>
 python -m venv venv
 </pre>
-</div>
-
 <p>
-حالا باید venv خودتون رو فعال کنید. <br>
-  در روت (root) اصلی پروژه باید این دستور را در ترمینال یا کنسول خود تایپ کنید: 
+Now you should activate your venv.
+So in the main root of project you should type this command in your Terminal or Console: 
 </p>
 <b>
-در Linux/macOS:
+In Linux/macOS:
 </b>
-<div dir="ltr">
 <pre>
 source venv/bin/activate
 </pre>
-</div>
 <b>
-در Windows:
+In Windows:
 </b>
-
-<div dir="ltr">
 <pre>
 venv/Scripts/activate.ps1
 </pre>
-</div>
 
 <p>
-  بعد از فعالسازی venv شما باید پکیج های <b> requirements.txt </b> را نصب کنید. <br> 
-پس در روت (root) اصلی پروژه باید این دستور را در ترمینال یا کنسول خود تایپ کنید: 
+After activating venv you should install the <b>requirements.txt</b> packages. So type this command in your Terminal or Console: 
 </p>
-
-<div dir="ltr">
 <pre>
 pip install -r requirements.txt
 </pre>
-</div>
-
 <h5>
-پیکربندی پروژه تقریبا تمام است.
+Configuration of project almost done.
 </h5>
 
 <hr>
 
 <h3>
-🏁 اجرای پروژه
+🏁 Run the project
 </h3>
 <p>
-  اول از همه، لطفا دستور زیر را در ترمینال یا کنسول خود وارد کنید تا مطمئن بشید پروژه به درستی پیکربندی شده است:
+First of all, please enter the following command in the Terminal or Console to make sure the project is configured correctly:
 </p>
-
-<div dir="ltr">
 <pre>
 python manage.py check
 </pre>
-</div>
-
 <p>
-  باید با چنین پیغامی مواجه بشید:
+You should see This message:
   <strong>
     <i>
       "System check identified no issues (0 silenced)."
     </i>
   </strong>
   <br>
-  اگر این پیغام را مشاهده می‌کنید، می‌توانید پروژه را اجرا کنید. برای اجرای پروژه این دستور را در ترمینال یا کنسول وارد کنید:
+  If you see this message you can run project. So type this command in Terminal or Console:
 </p>
-
-<div dir="ltr">
 <pre>
 python manage.py runserver 8002
 </pre>
-</div>
-
 <h4>
-  تبریک، شما پروژه رو به درستی اجرا کردید ✅ 
+Congratulations, you ran the project correctly ✅
 </h4>
 
 <p>
-  حالا این آدرس رو در نوار URL مرورگر خود وارد کنید:
+Now copy/paste this address in your browser URL bar:
 </p>
-
-<div dir="ltr">
 <pre>
 http://127.0.0.1:8002/
 </pre>
-</div>
 
 <hr>
 <h3>
-✅ استفاده از پروژه
+✅ Use the project
 </h3>
 <h5>
-  حالا شما باید در PicoSchool لاگین کنید.
+Now you should Login into the PicoSchool. 
 </h5>
 <p>
-  در پایگاه داده (Database) پیشفرض، ما چند کاربر نمونه در نقش های مختلف داریم. <br>
-  شما می‌تونید با نقش های مختلف در PicoSchool لاگین کنید، نام کاربری و گذرواژه این کاربران نمونه در پایگاه داده پیشفرض در زیر فهرست شدند:  
+In default Database, we have some sample user in custom Roles. <br>
+You can login to PicoSchool with different roles, the usernames and passwords of these sample users in the default database are listed below:
 </p>
 <ul>
   <li>
-    نقش Manager (مدیر):
-    
+    Manager role:
 <pre>
 username: Admin
 password: Admin12345
 </pre>
-
   </li>
   <li>
-   نقش Teacher (دبیر):
-   
+    Teacher role:
 <pre>
 username: 0934567899
 password: Admin12345
 </pre>
-
   </li>
   <li>
-    نقش Student (دانش آموز):
-    
+    Student role:
 <pre>
 username: 0923456789
 password: Admin12345
 </pre>
-
   </li>
   <li>
-   نقش Parent (والدین):
-   
+    Parent role:
 <pre>
 username: 0934567898
 password: Admin12345
 </pre>
-
   </li>
 </ul>
 
 <h4>
-🔒 مسیر ادمین پنل اصلی:
+🔒 Main admin panel path:
 </h4>
-
-<div dir="ltr">
 <pre>
 http://127.0.0.1:8002/pico-school/
 </pre>
-</div>
 
 <hr>
 <h4>
-  ⭐️ حالا شما می‌تونید از تمام قابلیت های PicoSchool استفاده کنید.
+⭐️ Now you can use all the features of PicoSchool.
 </h4>
 
 <p>
-برای استفاده کامل و کاربردی از PicoSchool، در حال آماده سازی یک آموزش ساده هستیم که می توانید در ویکی (wiki) همین ریپازیتوری (repository) مشاهده کنید.
+To make full and practical use of PicoSchool, we are preparing a simple tutorial that you can see in the same repository wiki.
 <b>
-  <a href="https://github.com/AminAliH47/PicoSchool/wiki">ویکی PicoSchool</a>  
+  <a href="https://github.com/AminAliH47/PicoSchool/wiki">PicoSchool Wiki</a>  
 </b>
 </p>
 
@@ -187,6 +149,3 @@ http://127.0.0.1:8002/pico-school/
 <h6 align="center">
   Licensed by <b>Coilaco</b>
 </h6>
-
-  
-</div>
