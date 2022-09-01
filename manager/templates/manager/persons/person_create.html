@@ -359,46 +359,11 @@
                         {% endfor %}
                     </div>
                     <div class="col-xl-3 col-lg-6 col-12 form-group">
-                        <label> مجرد یا متاهل <span>*</span></label>
-                        {{ form.single_or_married }}
-                        {% for error in form.date_of_birth.errors %}
-                        <p class="text-danger">{{ error }}</p>
-                        {% endfor %}
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-12 form-group">
                         <label> تاریخ تولد <span>*</span></label>
                         {{ form.date_of_birth }}
                         {% for error in form.date_of_birth.errors %}
                         <p class="text-danger">{{ error }}</p>
                         {% endfor %}
-                    </div>
-                    <div class="col-12" style="display: none;" id="spouse_info">
-                        <div class="row">
-                            <div class="col-lg-12 col-12">
-                                <p class="form-group-title">اطلاعات همسر</p>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-12 form-group">
-                                <label> نام و نام خانوادگی همسر <span>*</span></label>
-                                {{ form.spouse_fullname }}
-                                {% for error in form.spouse_fullname.errors %}
-                                <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-12 form-group">
-                                <label> تلفن همسر <span>*</span></label>
-                                {{ form.spouse_phone }}
-                                {% for error in form.spouse_phone.errors %}
-                                <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-12 form-group">
-                                <label> تعداد فرزندان <span>*</span></label>
-                                {{ form.child_num }}
-                                {% for error in form.child_num.errors %}
-                                <p class="text-danger">{{ error }}</p>
-                                {% endfor %}
-                            </div>
-                        </div>
                     </div>
                     <div class="col-lg-12 col-12">
                         <p class="form-group-title">اطلاعات تحصیلی و شغلی</p>

@@ -199,16 +199,6 @@
                                 <td>مجرد یا متاهل:</td>
                                 <td class="font-medium text-dark-medium">{{ person.single_or_married }}</td>
                             </tr>
-                            {% if person.single_or_married == "متاهل" %}
-                            <tr>
-                                <td>نام و نام خانوادگی همسر:</td>
-                                <td class="font-medium text-dark-medium">{{ person.spouse_fullname }}</td>
-                            </tr>
-                            <tr>
-                                <td>تعداد فرزندان:</td>
-                                <td class="font-medium text-dark-medium">{{ person.child_num }}</td>
-                            </tr>
-                            {% endif %}
                             <tr>
                                 <td><p class="form-group-title">اطلاعات تحصیلی و شغلی</p></td>
                             </tr>
@@ -247,12 +237,6 @@
                                 <td>تلفن منزل:</td>
                                 <td class="font-medium text-dark-medium">{{ person.home_phone }}</td>
                             </tr>
-                            {% if person.single_or_married == "متاهل" %}
-                            <tr>
-                                <td>تلفن همسر:</td>
-                                <td class="font-medium text-dark-medium">{{ person.spouse_phone }}</td>
-                            </tr>
-                            {% endif %}
                             <tr>
                                 <td><p class="form-group-title">آدرس</p></td>
                             </tr>

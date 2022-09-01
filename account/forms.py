@@ -154,50 +154,18 @@ class CreateTeacherUserForm(forms.ModelForm):
         self.fields['basic_salary'].required = True
         self.fields['single_or_married'].required = True
         self.fields['status'].required = True
-
-    def clean_spouse_fullname(self):
-        data = self.cleaned_data['spouse_fullname']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            spouse_fullname = self.cleaned_data['spouse_fullname']
-            if spouse_fullname is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
-    def clean_spouse_phone(self):
-        data = self.cleaned_data['spouse_phone']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            spouse_phone = self.cleaned_data['spouse_phone']
-            if spouse_phone is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
-    def clean_child_num(self):
-        data = self.cleaned_data['child_num']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            child_num = self.cleaned_data['child_num']
-            if child_num is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
     class Meta:
         model = User
         fields = (
             'first_name', 'last_name', 'national_code', 'phone', 'home_phone', 'date_of_birth', 'father_name',
             'address', 'password', 'profile_img', 'education', 'certificate_code', 'university',
-            'working_hours', 'basic_salary', 'single_or_married', 'child_num', 'spouse_fullname', 'spouse_phone',
-            'status', 'is_teacher',
+            'working_hours', 'basic_salary', 'single_or_married', 'status', 'is_teacher',
         )
         widget_fields['education'] = forms.TextInput(attrs={'placeholder': 'تحصیلات را وارد کنید'})
         widget_fields['certificate_code'] = forms.TextInput(attrs={'placeholder': 'شماره شناسنامه'})
         widget_fields['university'] = forms.TextInput(attrs={'placeholder': 'دانشگاه محل تحصیل'})
         widget_fields['working_hours'] = forms.NumberInput(attrs={'placeholder': 'تعداد ساعت های کار'})
         widget_fields['basic_salary'] = forms.NumberInput(attrs={'placeholder': 'حقوق پایه'})
-        widget_fields['child_num'] = forms.NumberInput(attrs={'placeholder': 'تعداد فرزند'})
-        widget_fields['spouse_fullname'] = forms.TextInput(attrs={'placeholder': 'نام و نام خانوادگی همسر'})
-        widget_fields['spouse_phone'] = forms.TextInput(attrs={'placeholder': 'تلفن همسر'})
         widgets = widget_fields
 
         def save(self, commit=True):
@@ -224,47 +192,16 @@ class UpdateTeacherUserForm(forms.ModelForm):
         self.fields['single_or_married'].required = True
         self.fields['status'].required = True
 
-    def clean_spouse_fullname(self):
-        data = self.cleaned_data['spouse_fullname']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            spouse_fullname = self.cleaned_data['spouse_fullname']
-            if spouse_fullname is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
-    def clean_spouse_phone(self):
-        data = self.cleaned_data['spouse_phone']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            spouse_phone = self.cleaned_data['spouse_phone']
-            if spouse_phone is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
-    def clean_child_num(self):
-        data = self.cleaned_data['child_num']
-        single_or_married = self.cleaned_data.get('single_or_married')
-        if single_or_married == "متاهل":
-            child_num = self.cleaned_data['child_num']
-            if child_num is None:
-                raise forms.ValidationError("این فیلد مورد نیاز است")
-        return data
-
     class Meta:
         model = User
         fields = (
             'first_name', 'last_name', 'national_code', 'phone', 'home_phone', 'date_of_birth', 'father_name',
             'address', 'profile_img', 'education', 'certificate_code', 'university',
-            'working_hours', 'basic_salary', 'single_or_married', 'child_num', 'spouse_fullname', 'spouse_phone',
-            'status', 'is_teacher',
+            'working_hours', 'basic_salary', 'single_or_married', 'status', 'is_teacher',
         )
         widget_fields['education'] = forms.TextInput(attrs={'placeholder': 'تحصیلات را وارد کنید'})
         widget_fields['certificate_code'] = forms.TextInput(attrs={'placeholder': 'شماره شناسنامه'})
         widget_fields['university'] = forms.TextInput(attrs={'placeholder': 'دانشگاه محل تحصیل'})
         widget_fields['working_hours'] = forms.NumberInput(attrs={'placeholder': 'تعداد ساعت های کار'})
         widget_fields['basic_salary'] = forms.NumberInput(attrs={'placeholder': 'حقوق پایه'})
-        widget_fields['child_num'] = forms.NumberInput(attrs={'placeholder': 'تعداد فرزند'})
-        widget_fields['spouse_fullname'] = forms.TextInput(attrs={'placeholder': 'نام و نام خانوادگی همسر'})
-        widget_fields['spouse_phone'] = forms.TextInput(attrs={'placeholder': 'تلفن همسر'})
         widgets = widget_fields
