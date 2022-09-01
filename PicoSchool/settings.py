@@ -201,8 +201,8 @@ CKEDITOR_CONFIGS = {
 
 # PWA SECTION
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
-PWA_APP_NAME = 'PicoSchool'
-PWA_APP_DESCRIPTION = "PicoSchool "
+PWA_APP_NAME = 'Cargo Managment'
+PWA_APP_DESCRIPTION = "A system for managing cargo. "
 PWA_APP_THEME_COLOR = '#000000'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'

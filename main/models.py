@@ -6,6 +6,7 @@ class SiteSetting(models.Model):
         ("green", "سبز"),
         ("orange", "نارنجی"),
         ("yellow", "زرد"),
+        ("purple", "بنفش"),
     )
     MENU_THEME = (
         ('waterfall', 'منو آبشاری'),
@@ -24,7 +25,7 @@ class SiteSetting(models.Model):
     site_color = models.CharField(
         max_length=10,
         choices=COLOR_THEME,
-        default="green",
+        default="purple",
         verbose_name="رنگ سایت",
     )
     site_menu_theme = models.CharField(

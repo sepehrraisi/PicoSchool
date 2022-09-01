@@ -8,61 +8,6 @@
                 </div>
             </a>
         </li>
-        {% if request.user.is_superuser or request.user.is_manager or request.user.is_teacher %}
-        <li class="treeview-animated-items">
-            <a class="closed {% if request.resolver_match.url_name == 'notices' %}active2{% endif %}">
-                <span><i class="far fa-bell ic-w mx-2"></i>اعلانات</span>
-                <i class="fas fa-angle-right"></i>
-            </a>
-            <ul class="nested">
-                <li>
-                    <a href="{% url 'main:notices' %}">
-                        <div class="treeview-animated-element {% if request.resolver_match.url_name == 'notices' %}activate{% endif %}">
-                            <i class="fas fa-bell ic-w mx-2"></i>تابلو اعلانات
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#notices_modal">
-                        <div class="treeview-animated-element"><i class="fas fa-plus ic-w mx-2"></i>اعلان جدید
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        {% else %}
-        <li>
-            <a href="{% url 'main:notices' %}">
-                <div class="treeview-animated-element {% if request.resolver_match.url_name == 'notices' %}opened{% endif %}">
-                    <i class="fas fa-bell ic-w mx-2"></i>اعلانات
-                </div>
-            </a>
-        </li>
-        {% endif %}
-        <li>
-            <a href="{% url 'main:events' %}">
-                <div class="treeview-animated-element {% if request.resolver_match.url_name == 'events' %}opened{% endif %}">
-                    <i class="far fa-calendar-alt ic-w mx-2"></i>رویداد ها
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="{% url 'main:news_list' %}">
-                <div class="treeview-animated-element {% if request.resolver_match.url_name == 'news_list' %}opened{% endif %}">
-                    <i class="fas fa-newspaper ic-w mx-2"></i>اخبار آموزش و پرورش
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="{% url 'poll:poll_list' %}">
-                {% if request.user.is_superuser or request.user.is_manager %}
-                <div class="count-num"><span>{{ poll.all_count }}</span></div>
-                {% endif %}
-                <div class="treeview-animated-element {% if request.resolver_match.url_name == 'poll_list' %}opened{% endif %}">
-                    <i class="fas fa-poll ic-w mx-2"></i>فهرست نظرسنجی
-                </div>
-            </a>
-        </li>
         {% if request.user.is_superuser or request.user.is_manager %}
         <li class="mt-4 mx-4">
             <div>برای مدیران</div>
